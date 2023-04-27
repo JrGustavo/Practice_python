@@ -1,14 +1,23 @@
 #Profundizando en el tipo str
 
-# Dar formato a un str
+# Caracteres byte
+carateres_en_bytes = b'Hola Mundo'
+print(carateres_en_bytes)
 
-nombre = 'Juan'
-edad = 28
-sueldo = 3000
-mensaje  = 'Nombre {} Edad {}   Sueldo {:.2f}'.format(nombre, edad, sueldo)
+mensaje = b'Universidad Python'
+print(mensaje[1])
+print(chr(mensaje[1]))
 
+lista_caracteres = mensaje.split()
+print(lista_caracteres)
 
-mensaje = 'Sueldo {2:.2f} Edad {1} Nombre {0}'.format(nombre, edad, sueldo)
-print(mensaje)
+#Convertir str a bytes
+string = 'Programacion con Python'
+print('string original:', string)
+bytes = string.encode('UTF-8')
+print('bytes codificado: ', bytes)
 
-mensaje = 'Nombre {n} Edad {e} Sueldo {s:.2f}'-format(n=nombre,e=edad,s=sueldo)
+string2 = bytes.decode('UTF-8')
+print('string decodificando:', string2)
+print(string == string2)
+
