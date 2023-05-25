@@ -42,3 +42,29 @@ lista_impares = []
     for numero in range(10)]
 print(f'Pares: {lista_pares}')
 print(f'Impares: {lista_impares}')
+
+#Lista de lsitas
+lista_listas = [[1,2,3], [4,5,6], [7,8,9,10]]
+# Convertimos la lista de lisas en una sola lista
+lista_simple = [valor
+                for sublista  in lista_listas
+                for valor in sublista ]
+print(f'lista simple: {lista_simple}')
+
+#Ahora creamos una lista de numeros pares a partur de la lista de listas
+
+# Sin list comprehensions, cilos for anidados
+lista_pares = []
+for sublista in lista_listas:
+    for valor in sublista:
+        if valor %2==0:
+           lista_pares.append(valor)
+print(f'Lista pares: {lista_pares}')
+
+# Con lisdt comprehensions, es una sola linea de codigo
+# No es necesario separar las lienas, solo es para mejorar la elctura del codigo
+
+lista_pares = []
+lista_pares = [valor for sublista in lista_listas for valor in sublista if valor %2==0 ]
+print(f'Lista pares: {lista_pares}')
+
