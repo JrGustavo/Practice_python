@@ -8,7 +8,9 @@ class Persona:
 
     # repr, mas enfocado a los programadores
     def __repr__(self):
-        return {self.__class__.__name__ }, apellido: {self.apellido}'
+        return {self.__class__.__name__ }, self.apellido
+
+
 
     # Str es mas para el usuario final u otros sistemas
     # La implementación por default llama al metodo repr
