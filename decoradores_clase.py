@@ -68,7 +68,7 @@ class Persona:
         print('2.Se ejecuta el inicializador')
         self._nombre = nombre
         self._apellido = apellido
-        self._edad = edad
+        self._edad = self.edad
 
 
     @property
